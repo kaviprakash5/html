@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smartphones</title>
+    <style>
+        /* Base page styling */
+        body {
+            background-color: lightcyan;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* Modernized table styling */
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white; /* Adds clean contrast against lightcyan */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+            border-radius: 8px;
+            overflow: hidden; /* Cleans up corners */
+        }
+        
+        /* Distinct look for the header row */
+        th {
+            background-color: #008b8b; /* Dark Cyan background */
+            color: white; /* White text */
+            font-size: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        th, td {
+            border: 1px solid #ddd; /* Softer border lines */
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Subtle row separation */
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Styling for the Add to Cart and Submit buttons */
+        button, input[type="submit"] {
+            background-color: #008b8b;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        /* Buttons change color slightly when your mouse hovers over them */
+        button:hover, input[type="submit"]:hover {
+            background-color: #006666;
+        }
+
+        /* Spacing for the submit form container */
+        form {
+            margin-top: 30px;
+        }
+
+        /* Link styling */
+        a {
+            color: #006666;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>SMARTPHONE COLLECTION</h1>
+    
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Rating</th>
+            <th>Video</th>
+            <th>Cart</th>
+        </tr>
+        <tr>
+            <td>
+                <img src="10.jpeg" alt="iPhone 15" width="120" height="120"><br>
+                <strong>iPhone 15</strong>
+            </td>
+            <td>₹89,999</td>
+            <td style="color: #ff9800;">★★★★★</td> <!-- Orange stars -->
+            <td>
+                <video width="150" controls>
+                    <source src="Z:\html\2\15.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </td>
+            <td>
+                <button>Add To Cart</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="10.jpeg" alt="iPhone 10" width="120" height="120"><br>
+                <strong>iPhone 10</strong>
+            </td>
+            <td>₹59,999</td>
+            <td style="color: #ff9800;">★★★★☆</td> <!-- Orange stars -->
+            <td>
+                <video width="150" controls>
+                    <source src="Z:\html\2\15.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </td>
+            <td>
+                <button>Add To Cart</button>
+            </td>
+        </tr>
+    </table>
+
+    <form action="/submit-endpoint" method="POST">
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <a href="home.html">Back to Home</a>
+
+</body>
+</html>

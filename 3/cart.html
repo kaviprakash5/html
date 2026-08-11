@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <style>
+        /* Base page look */
+        body {
+            background-color: lightgrey;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            color: #333;
+        }
+
+        /* Cleans up tables with borders, background, and shadows */
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 4px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            text-align: center;
+        }
+
+        /* Makes table headers look professional */
+        th {
+            background-color: #4a5568;
+            color: white;
+        }
+
+        /* Styles text input boxes, dropdowns, and textareas */
+        input[type="text"], 
+        input[type="email"], 
+        input[type="tel"], 
+        textarea, 
+        input[type="number"] {
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="number"] {
+            width: 60px;
+            text-align: center;
+        }
+
+        /* Order form specific styling */
+        .order-table td {
+            text-align: left; /* Aligns form labels to the left */
+            border: none;    /* Removes borders inside the form table */
+            padding: 8px;
+        }
+
+        /* Action buttons style */
+        button, input[type="submit"] {
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Red color for the remove button */
+        button {
+            background-color: #e53e3e;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #c53030;
+        }
+
+        /* Dark blue color for the place order button */
+        input[type="submit"] {
+            background-color: #2b6cb0;
+            color: white;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2b5c8f;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h1>SHOPPING CART</h1>
+    
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>
+                <!-- Fixed typo here from imgsrc to img src -->
+                <img src="10.jpeg" width="120" height="120"><br>
+                <strong>iPhone 16</strong>
+            </td>
+            <td>₹79,999</td>
+            <td>
+                <input type="number" value="1" min="1">
+            </td>
+            <td>₹79,999</td>
+            <td>
+                <button>Remove</button>
+            </td>
+        </tr>
+    </table>
+    
+    <br><br>
+    <h2>Order Form</h2>
+    
+    <form>
+        <!-- Added a class name so we can remove borders just on this form -->
+        <table class="order-table">
+            <tr>
+                <td><b>Name</b></td>
+                <td><input type="text" size="25"></td>
+            </tr>
+            <tr>
+                <td><b>Email</b></td>
+                <td><input type="email" size="25"></td>
+            </tr>
+            <tr>
+                <td><b>Mobile Number</b></td>
+                <td><input type="tel" size="25"></td>
+            </tr>
+            <tr>
+                <td><b>Delivery Address</b></td>
+                <td><textarea rows="4" cols="27"></textarea></td>
+            </tr>
+            <tr>
+                <td><b>Payment Method</b></td>
+                <td>
+                    <input type="radio" name="pay" checked> Cash on Delivery<br>
+                    <input type="radio" name="pay"> UPI<br>
+                    <input type="radio" name="pay"> Credit Card
+                </td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" value="Place Order">
+    </form>
+</center>
+</body>
+</html>
