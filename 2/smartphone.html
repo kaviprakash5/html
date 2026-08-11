@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smartphones</title>
+    <style>
+        body {
+            background-color: lightcyan;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>SMARTPHONE COLLECTION</h1>
+    
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Rating</th>
+            <th>Video</th>
+            <th>Cart</th>
+        </tr>
+        <tr>
+            <td>
+                <img src="10.jpeg" alt="iPhone 15" width="120" height="120"><br>
+                <strong>iPhone 15</strong>
+            </td>
+            <td>₹89,999</td>
+            <td>★★★★★</td>
+            <td>
+                <video width="150" controls>
+                    <source src="Z:\html\2\15.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </td>
+            <td>
+                <button>Add To Cart</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="10.jpeg" alt="iPhone 10" width="120" height="120"><br>
+                <strong>iPhone 10</strong>
+            </td>
+            <td>₹59,999</td>
+            <td>★★★★☆</td>
+            <td>
+                <video width="150" controls>
+                    <source src="Z:\html\2\15.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </td>
+            <td>
+                <button>Add To Cart</button>
+            </td>
+        </tr>
+    </table>
+
+    <form action="/submit-endpoint" method="POST">
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <a href="home.html">Back to Home</a>
+
+</body>
+</html>
